@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
-
+import Header from './components/header'
+import Footer from './components/footer'
 
 
 
@@ -8,7 +9,9 @@ export default function Home() {
   return (
     <>
   
-
+  <div id="page">
+   
+   <Header />
     {/* /header */}
     <main>
       <div id="carousel-home">
@@ -1382,7 +1385,13 @@ export default function Home() {
     {/* /main */}
   
 
-
+  <Footer />
+    {/*/footer*/}
+  </div>
+  {/* page */}
+  <div id="toTop" />
+  {/* Back to top button */}
+  {/* COMMON SCRIPTS */}
 
   
 </>

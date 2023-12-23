@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Script from 'next/script'
+import Header from '../app/components/header'
+import Footer from '../app/components/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,8 +18,78 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+<html lang="en">
+  <head>
+  <meta charSet="utf-8" />
+  <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="description" content="" />
+  <meta name="author" content="Ansonika" />
+  <title>Allaia | Bootstrap eCommerce Template - ThemeForest</title>
+  {/* Favicons*/}
+  <link rel="shortcut icon" href="theme/img/favicon.ico" type="image/x-icon" />
+  <link
+    rel="apple-touch-icon"
+    type="image/x-icon"
+    href="theme/img/apple-touch-icon-57x57-precomposed.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    type="image/x-icon"
+    sizes="72x72"
+    href="theme/img/apple-touch-icon-72x72-precomposed.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    type="image/x-icon"
+    sizes="114x114"
+    href="theme/img/apple-touch-icon-114x114-precomposed.png"
+  />
+  <link
+    rel="apple-touch-icon"
+    type="image/x-icon"
+    sizes="144x144"
+    href="theme/img/apple-touch-icon-144x144-precomposed.png"
+  />
+  {/* GOOGLE WEB FONT */}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  {/* BASE CSS */}
+  <link href="theme/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="theme/css/style.css" rel="stylesheet" />
+  {/* SPECIFIC CSS */}
+  <link href="theme/css/home_1.css" rel="stylesheet" />
+  {/* YOUR CUSTOM CSS */}
+  <link href="theme/css/custom.css" rel="stylesheet" />
+  </head>
+  <body className={inter.className}>
+  <div id="page">
+   <Header />
+
+     {children}
+        
+   <Footer />
+    {/*/footer*/}
+  </div>
+  {/* page */}
+  <div id="toTop" />
+  {/* Back to top button */}
+  {/* COMMON SCRIPTS */}
+
+  <Script src="/theme/js/common_scripts.min.js" />
+  <Script src="/theme/js/main.js" />
+  
+  {/* SPECIFIC SCRIPTS */}
+  <Script src="/theme/js/carousel-home.min.js" />
+        
+        </body>
     </html>
   )
 }
